@@ -14,6 +14,9 @@
 	"name": "Jade",
 	"url": "http://jade-lang.com/"
 }, {
+	"name": "Babel",
+	"url": "https://babeljs.io/"
+}, {
 	"name": "Grunt",
 	"url": "http://gruntjs.com/"
 }]
