@@ -1,4 +1,4 @@
-# generator-base-backbone
+# generator-base-reactjs
 
 [![Build Status](https://secure.travis-ci.org/zguillez/generator-base-reactjs.png?branch=master)](https://travis-ci.org/zguillez/generator-base-reactjs) [![Code Climate](https://codeclimate.com/github/zguillez/generator-base-reactjs/badges/gpa.svg)](https://codeclimate.com/github/zguillez/generator-base-reactjs)
 
