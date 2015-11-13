@@ -23,14 +23,18 @@ define(['react'], function(React) {
 		},
 		render: function() {
 			return (
-				<section className="content">
-				    <header>
-				    	<img src="images/reactjs.png" className="logo" />
-				    </header>
-				    <div className="buttons row">
-						{this.state.libs}	
-					</div>
-				</section>
+				<div className="container">
+					<Header/>
+					<section className="content">
+				    	<header>
+				    		<img src="images/reactjs.png" className="logo" />
+				    	</header>
+				    	<div className="buttons row">
+							{this.state.libs}	
+						</div>
+					</section>
+					<Footer/>
+				</div>
 			);
 		}
 	});

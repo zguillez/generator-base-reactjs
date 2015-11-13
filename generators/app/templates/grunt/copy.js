@@ -1,6 +1,12 @@
 'use strict';
 module.exports = function(grunt) {
 	grunt.config.set('copy', {
+		htacess: {
+			cwd: 'src/',
+			src: '.htaccess',
+			dest: 'dist/',
+			expand: true
+		},
 		index: {
 			cwd: 'src/',
 			src: 'index.html',
@@ -41,6 +47,12 @@ module.exports = function(grunt) {
 			cwd: 'bower_components/lodash',
 			src: 'lodash.min.js',
 			dest: 'dist/lib/',
+			expand: true
+		},
+		page: {
+			cwd: 'bower_components/page/',
+			src: '*.js',
+			dest: 'dist/lib/page/',
 			expand: true
 		},
 		babel_core: {

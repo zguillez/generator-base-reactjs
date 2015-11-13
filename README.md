@@ -178,6 +178,77 @@ Example:
 * [http://jade-lang.com/](http://jade-lang.com/)
 * [http://wix.github.io/react-templates/](http://wix.github.io/react-templates/)
 
+# Routing
+
+Routing is made with Page.js micro client-side router. Router is loaded in Main.js file:
+
+	// src/scripts/main.js
+	
+	'use strict';
+	require.config({
+		paths: {
+			text: '../lib/text',
+			react: '../lib/react',
+			jsx: '../lib/jsx',
+			react_dom: '../lib/react-dom',
+			page: '../lib/page/page',
+			underscore: '../lib/lodash.min',
+			jquery: '../lib/jquery.min',
+			bootstrap: '../lib/bootstrap.min',
+			router: './router'
+		}
+	});
+	window.app = {};
+	require(['react', 'jquery', 'underscore'], function(React, $, _) {
+		require(['react_dom', , 'bootstrap'], function(ReactDOM, Bootstrap) {
+			require(['router']);
+		});
+	});
+
+Place routing path in file router.js
+
+	// src/scripts/router.js
+	
+	define(['page', 'react', 'react_dom'], function(Page, React, ReactDOM) {
+		'use strict';
+		Page.base('');
+		Page('/', index);
+		Page();
+	
+		function index(ctx) {
+			if (ctx.hash !== '') {
+				Page(ctx.hash);
+			} else {
+				landing();
+			}
+		}
+	
+		function landing() {
+			loadComponent('../js/components/landing');
+		}
+	
+		function loadComponent(path) {
+			require([path], function(Component) {
+				ReactDOM.render(<Component/>, document.getElementById('app'));
+			});
+		}
+	});
+
+`Page(ctx.hash);` in index function is needed for resolve inssue with page reload with hash...
+
+A *.htcaccess* file is needed for remove the /#/ hash from urls:
+
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^([^/]+)/?$ /#/$1 [L,NC]
+
+**Documentation:**
+
+* [https://visionmedia.github.io/page.js/](https://visionmedia.github.io/page.js/)
+
+
 # Contributing and issues
 
 Contributors are welcome, please fork and send pull requests! If you have any ideas on how to make this project better then please submit an issue or send me an [email](mailto:mail@zguillez.io).
@@ -189,6 +260,9 @@ Contributors are welcome, please fork and send pull requests! If you have any id
 Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Open Source projects used within this project retain their original licenses.
 
 # Changelog
+
+### v1.1.0 (Novembre 14, 2015) 
+* Routing with Page.JS
 
 ### v1.0.0 (Novembre 6, 2015) 
 * Initial ReactJS skeleton

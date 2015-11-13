@@ -1,15 +1,24 @@
-define(['controllers', 'directives'], function() {
+define(['page', 'react', 'react_dom'], function(Page, React, ReactDOM) {
 	'use strict';
-	window.app.config(['$routeProvider',
-		function($routeProvider) {
-			$routeProvider.
-			when('/', {
-				templateUrl: 'templates/index.html',
-				controller: 'indexController'
-			}).
-			otherwise({
-				redirectTo: '/'
-			});
+	Page.base('');
+	Page('/', index);
+	Page();
+
+	function index(ctx) {
+		if (ctx.hash !== '') {
+			Page(ctx.hash);
+		} else {
+			landing();
 		}
-	]);
+	}
+
+	function landing() {
+		loadComponent('../js/components/landing');
+	}
+
+	function loadComponent(path) {
+		require([path], function(Component) {
+			ReactDOM.render(<Component/>, document.getElementById('app'));
+		});
+	}
 });

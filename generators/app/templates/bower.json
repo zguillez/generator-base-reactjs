@@ -16,6 +16,7 @@
 		"text": "requirejs-text#~2.0.14",
 		"jquery": "~2.1.0",
 		"bootstrap": "~3.3.5",
-		"lodash": "~3.10.1"
+		"lodash": "~3.10.1",
+		"page": "visionmedia/page.js#~1.6.4"
 	}
 }
