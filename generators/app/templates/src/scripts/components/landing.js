@@ -1,4 +1,4 @@
-define(['react'], function(React) {
+define(['react', 'components/header', 'components/footer'], function(React, Header, Footer) {
 	'use strict';
 	var Content = React.createClass({
 		getInitialState: function() {
