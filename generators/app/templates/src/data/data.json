@@ -2,6 +2,9 @@
 	"name": "RequireJS",
 	"url": "http://requirejs.org/"
 }, {
+	"name": "Page.js",
+	"url": "https://visionmedia.github.io/page.js/"
+}, {
 	"name": "Jquery",
 	"url": "https://jquery.com/"
 }, {
