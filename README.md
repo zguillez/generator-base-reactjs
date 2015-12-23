@@ -4,6 +4,7 @@
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/generator-base-reactjs.svg)](https://codeclimate.com/github/zguillez/generator-base-reactjs)
 [![Build Status](http://img.shields.io/travis/zguillez/generator-base-reactjs.svg)](https://travis-ci.org/zguillez/generator-base-reactjs)
 [![Coverage Status](http://img.shields.io/coveralls/zguillez/generator-base-reactjs.svg)](https://coveralls.io/r/zguillez/generator-base-reactjs)
+[![Dependency Status](https://gemnasium.com/zguillez/generator-base-angularjs.svg)](https://gemnasium.com/zguillez/generator-base-reactjs)
 ![](https://reposs.herokuapp.com/?path=zguillez/generator-base-reactjs)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
