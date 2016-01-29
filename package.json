@@ -1,6 +1,6 @@
 {
 	"name": "generator-base-reactjs",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "ReactJS basic skeleton for webapp development. With RequireJS, Bootstrap, Sass and templating with Jade. JSX compiled with Babel.",
 	"license": "MIT",
 	"main": "app/index.js",
@@ -30,14 +30,14 @@
 		"Babel"
 	],
 	"dependencies": {
-		"yeoman-generator": "^0.22.2",
+		"yeoman-generator": "^0.22.5",
 		"chalk": "^1.1.1",
 		"yosay": "^1.1.0"
 	},
 	"devDependencies": {
 		"mocha": "*",
-		"babel-core": "^6.3.26",
-		"bower": "^1.7.1",
+		"babel-core": "^6.4.5",
+		"bower": "^1.7.7",
 		"grunt": "^0.4.5",
 		"grunt-babel": "^6.0.0",
 		"grunt-contrib-clean": "~0.7.0",
@@ -56,7 +56,7 @@
 		"grunt-react-templates": "^0.4.0",
 		"grunt-reload": "^0.2.0",
 		"jade": "^1.11.0",
-		"react-templates": "^0.4.0",
+		"react-templates": "^0.4.1",
 		"load-grunt-tasks": "^3.4.0"
 	}
 }
