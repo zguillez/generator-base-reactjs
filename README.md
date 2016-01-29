@@ -1,5 +1,7 @@
 # generator-base-reactjs
 
+[![Join the chat at https://gitter.im/zguillez/generator-base-reactjs](https://badges.gitter.im/zguillez/generator-base-reactjs.svg)](https://gitter.im/zguillez/generator-base-reactjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm version](https://badge.fury.io/js/generator-base-reactjs.svg)](https://badge.fury.io/js/generator-base-reactjs)
 [![Build Status](http://img.shields.io/travis/zguillez/generator-base-reactjs.svg)](https://travis-ci.org/zguillez/generator-base-reactjs)
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/generator-base-reactjs.svg)](https://codeclimate.com/github/zguillez/generator-base-reactjs)
