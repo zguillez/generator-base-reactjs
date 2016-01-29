@@ -13,72 +13,6 @@ module.exports = function(grunt) {
 			dest: 'dist/',
 			expand: true
 		},
-		requirejs: {
-			cwd: 'bower_components/requirejs',
-			src: 'require.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		requirejs_text: {
-			cwd: 'bower_components/text',
-			src: 'text.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		requirejs_jsx: {
-			cwd: 'bower_components/requirejs-react-jsx/',
-			src: 'jsx.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		react: {
-			cwd: 'bower_components/react',
-			src: 'react.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		react_dom: {
-			cwd: 'bower_components/react',
-			src: 'react-dom.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		lodash: {
-			cwd: 'bower_components/lodash',
-			src: 'lodash.min.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		page: {
-			cwd: 'bower_components/page/',
-			src: '*.js',
-			dest: 'dist/lib/page/',
-			expand: true
-		},
-		babel_core: {
-			cwd: 'node_modules/babel-core',
-			src: 'browser.min.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		jquery: {
-			cwd: 'bower_components/jquery/dist',
-			src: 'jquery.min.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		bootstrap: {
-			cwd: 'bower_components/bootstrap/dist/js',
-			src: 'bootstrap.min.js',
-			dest: 'dist/lib/',
-			expand: true
-		},
-		bootstrap_css: {
-			cwd: 'bower_components/bootstrap/dist/css',
-			src: 'bootstrap.min.css',
-			dest: 'dist/lib/',
-			expand: true
-		},
 		scripts: {
 			cwd: 'src/scripts/',
 			src: '**/*.js',
@@ -108,6 +42,48 @@ module.exports = function(grunt) {
 			src: ['*.*'],
 			dest: 'dist/data/',
 			expand: true
+		},
+		lodash_: {
+			cwd: 'bower_components/lodash/dist',
+			src: 'lodash.js',
+			dest: 'dist/lib/',
+			expand: true
+		},
+		bootstrap_: {
+			cwd: 'bower_components/bootstrap/dist/css',
+			src: 'bootstrap.min.css',
+			dest: 'dist/lib/',
+			expand: true
 		}
 	});
+	var json, json2, lib, key, path;
+	json = grunt.file.readJSON('bower.json');
+	for (lib in json.dependencies) {
+		if (grunt.file.exists('bower_components/' + lib + '/bower.json')) {
+			json2 = grunt.file.readJSON('bower_components/' + lib + '/bower.json');
+			for (key in json2) {
+				if (key === 'main') {
+					if (typeof json2[key] === 'object') {
+						var paths = [];
+						for (var item in json2[key]) {
+							path = json2[key][item];
+							path = path.replace('./', '');
+							paths[item] = path;
+							grunt.config.set('copy.' + lib + '.cwd', 'bower_components/' + lib);
+							grunt.config.set('copy.' + lib + '.src', paths);
+							grunt.config.set('copy.' + lib + '.dest', 'dist/lib/');
+							grunt.config.set('copy.' + lib + '.expand', true);
+						}
+					} else {
+						path = json2[key];
+						path = path.replace('./', '');
+						grunt.config.set('copy.' + lib + '.cwd', 'bower_components/' + lib);
+						grunt.config.set('copy.' + lib + '.src', path);
+						grunt.config.set('copy.' + lib + '.dest', 'dist/lib/');
+						grunt.config.set('copy.' + lib + '.expand', true);
+					}
+				}
+			}
+		}
+	}
 };

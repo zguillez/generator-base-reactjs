@@ -2,7 +2,8 @@
 module.exports = function(grunt) {
 	grunt.config.set('babel', {
 		options: {
-			sourceMap: false
+			sourceMap: true,
+			presets: ['es2015', 'react']
 		},
 		dist: {
 			files: [{

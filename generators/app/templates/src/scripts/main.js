@@ -5,10 +5,10 @@ require.config({
 		react: '../lib/react',
 		jsx: '../lib/jsx',
 		react_dom: '../lib/react-dom',
-		page: '../lib/page/page',
-		underscore: '../lib/lodash.min',
-		jquery: '../lib/jquery.min',
-		bootstrap: '../lib/bootstrap.min',
+		page: '../lib/page',
+		underscore: '../lib/lodash',
+		jquery: '../lib/jquery',
+		bootstrap: '../lib/bootstrap',
 		router: './router'
 	}
 });

@@ -1,7 +1,7 @@
 # generator-base-reactjs
 
 [![npm version](https://badge.fury.io/js/generator-base-reactjs.svg)](https://badge.fury.io/js/generator-base-reactjs)
-[![Build Status](http://img.shields.io/travis/zguillez/generator-base-reactjs.svg)](https://github.com/zguillez/generator-base-reactjs)
+[![Build Status](http://img.shields.io/travis/zguillez/generator-base-reactjs.svg)](https://travis-ci.org/zguillez/generator-base-reactjs)
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/generator-base-reactjs.svg)](https://codeclimate.com/github/zguillez/generator-base-reactjs)
 [![Dependency Status](https://gemnasium.com/zguillez/generator-base-reactjs.svg)](https://gemnasium.com/zguillez/generator-base-reactjs)
 [![Installs](https://img.shields.io/npm/dt/generator-base-reactjs.svg)](https://coveralls.io/r/zguillez/generator-base-reactjs)
@@ -26,6 +26,9 @@
 To install generator-base-backbone from npm, run:
 
 	npm install -g generator-base-reactjs
+	
+	//or:
+	sudo npm install -g generator-base-reactjs
 
 Finally, initiate the generator:
 
@@ -267,6 +270,12 @@ Contributors are welcome, please fork and send pull requests! If you have any id
 Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Open Source projects used within this project retain their original licenses.
 
 # Changelog
+### v1.3.0 (January 29, 2016)
+
+- Add livereload 
+- Auto copy dependecies fron bower.json file
+- Fix Babel 6 compiler
+
 ### v1.2.0 (January 12, 2016)
 - Fix yo install version
 
