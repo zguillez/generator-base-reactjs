@@ -33,7 +33,9 @@ module.exports = function(grunt) {
 		console.log(folders);
 		grunt.config.set('merge-copy.main.options.directories', folders);
 		grunt.config.set('clean.folders.src', folders);
+		/* remove files */
 		grunt.config.set('clean.files.src', ['dist/lib/bootstrap.less']);
+		//
 		grunt.task.run(['merge-copy', 'clean:folders', 'clean:files']);
 	});
 };

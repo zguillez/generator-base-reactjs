@@ -258,6 +258,52 @@ A *.htcaccess* file is needed for remove the /#/ hash from urls:
 
 * [https://visionmedia.github.io/page.js/](https://visionmedia.github.io/page.js/)
 
+# Dependencies
+
+Grunt task **copy.js** will read all bower.js files from **/bower_components** subfolders, and copy the file path from **main** node, like:
+
+	//bower_components/requirejs/bower.json
+	{
+	  ...
+	  "main": "require.js",
+	  ...
+	} 
+
+And put this files into folder **/dist/lib/**.
+
+If any installed dependency has no bower.json file (like lodash) you must edit the **copy.js** task to manually copy it:
+
+	grunt.config.set('copy', {
+		...
+		lodash_: {
+			cwd: 'bower_components/lodash/dist',
+			src: 'lodash.js',
+			dest: 'dist/lib/',
+			expand: true
+		},
+		...
+	});
+
+If an unnecesaary file is copied (like boostrap.less):
+
+	//bower_components/bootstrap/bower.json
+	{
+	  ...
+	  "main": [
+    	"less/bootstrap.less",
+    	"dist/js/bootstrap.js"
+	  ],
+	  ...
+	} 
+	
+you can delete it with the **clean-dist.js** task:
+
+	//grunt/clean-dist.js
+	grunt.registerTask('clean-dist', 'Clean dist folder', function() {
+		...
+		grunt.config.set('clean.files.src', ['dist/lib/bootstrap.less']);
+		...
+	});
 
 # Contributing and issues
 
