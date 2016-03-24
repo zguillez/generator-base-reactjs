@@ -7,7 +7,6 @@
 [![Installs](https://img.shields.io/npm/dt/generator-base-reactjs.svg)](https://coveralls.io/r/zguillez/generator-base-reactjs)
 ![](https://reposs.herokuapp.com/?path=zguillez/generator-base-reactjs)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
-[![Analytics](https://ga-beacon.appspot.com/UA-1125217-30/zguillez/generator-base-reactjs?pixel)](https://github.com/igrigorik/ga-beacon)
 [![Join the chat at https://gitter.im/zguillez/generator-base-reactjs](https://badges.gitter.im/zguillez/generator-base-reactjs.svg)](https://gitter.im/zguillez/generator-base-reactjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > [Zguillez](https://zguillez.io) | Guillermo de la Iglesia
@@ -342,6 +341,6 @@ Features:
 * Babel
 * Grunt tasks
 
-
+[![Analytics](https://ga-beacon.appspot.com/UA-1125217-30/zguillez/generator-base-reactjs?pixel)](https://github.com/igrigorik/ga-beacon)
 
 
