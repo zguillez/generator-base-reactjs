@@ -13,10 +13,10 @@
 	"dependencies": {
 		"requirejs": "~2.2.0",
 		"requirejs-text": "~2.0.14",
-		"react": "~0.14.7",
-		"jquery": "~2.2.2",
+		"react": "~15.0.0",
+		"jquery": "~2.2.3",
 		"bootstrap": "~3.3.6",
-		"lodash": "~4.6.1",
+		"lodash": "~4.9.0",
 		"page": "~1.7.1"
 	}
 }
