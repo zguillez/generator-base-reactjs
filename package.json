@@ -35,7 +35,7 @@
     "yosay": "^1.1.1"
   },
   "devDependencies": {
-    "babel-core": "^6.7.5",
+    "babel-core": "^6.7.6",
     "bower": "^1.7.9",
     "grunt": "^0.4.5",
     "grunt-babel": "^6.0.0",
