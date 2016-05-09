@@ -1,6 +1,6 @@
 {
   "name": "generator-base-reactjs",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "ReactJS basic skeleton for webapp development. With RequireJS, Bootstrap, Sass and templating with Jade. JSX compiled with Babel.",
   "homepage": "",
   "author": {
