@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	grunt.initConfig({});
 	require('load-grunt-tasks')(grunt);
 	require('./grunt/eslint')(grunt);
@@ -18,15 +18,13 @@ module.exports = function(grunt) {
 	require('./grunt/babel')(grunt);
 	require('./grunt/clean-dist')(grunt);
 	grunt.registerTask('default', ['serve']);
-	grunt.registerTask('serve', function() {
-		grunt.task.run(['clean:dist', 'eslint', 'sass', 'jade', 'copy', 'clean-dist', 'replace', 'reactTemplates', 'babel',
-			'connect', 'open', 'watch'
-		]);
+	grunt.registerTask('serve', function () {
+		grunt.task.run(['clean:dist', 'sass', 'jade', 'copy', 'clean-dist', 'replace', 'reactTemplates', 'babel', 'connect', 'open', 'watch']);
 	});
-	grunt.registerTask('build', function() {
-		grunt.task.run(['clean:dist', 'eslint', 'sass', 'jade', 'copy', 'clean-dist', 'replace', 'reactTemplates', 'babel']);
+	grunt.registerTask('build', function () {
+		grunt.task.run(['clean:dist', 'sass', 'jade', 'copy', 'clean-dist', 'replace', 'reactTemplates', 'babel']);
 	});
-	grunt.registerTask('rebuild', function() {
+	grunt.registerTask('rebuild', function () {
 		grunt.task.run(['clean:dist', 'sass', 'jade', 'copy', 'clean-dist', 'replace', 'reactTemplates', 'babel']);
 	});
 };
