@@ -1,5 +1,7 @@
 # generator-base-reactjs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zguillez/generator-base-reactjs.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/generator-base-reactjs.svg)](https://badge.fury.io/js/generator-base-reactjs)
 [![Build Status](http://img.shields.io/travis/zguillez/generator-base-reactjs.svg)](https://travis-ci.org/zguillez/generator-base-reactjs)
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/generator-base-reactjs.svg)](https://codeclimate.com/github/zguillez/generator-base-reactjs)
