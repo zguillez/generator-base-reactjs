@@ -45,7 +45,7 @@
     "gulp-nsp": "^2.4.2",
     "gulp-coveralls": "^0.1.4",
     "bower": "^1.7.9",
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.4",
     "grunt-babel": "^6.0.0",
     "grunt-contrib-clean": "~1.0.0",
     "grunt-contrib-concat": "^1.0.1",
